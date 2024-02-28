@@ -1,0 +1,8 @@
+a=5
+b=10
+print('Suma de a+b',a+b)
+print('Resta de a-b',a-b)
+print('Multiplicacion de a*b',a*b)
+print('Division de a/b',a/b)
+print('Residuo de a/b',a%b)
+print('Potencia de a**b',a**b)
