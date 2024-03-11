@@ -2,7 +2,7 @@ import re
 nv = int(input('¿Cuantos numeros de telefono vas a dar? '))
 cad = ''
 s = ''
-RE = r'\+\d{2}'
+RE = re.compile(r'\+\d{2}')
 if nv < 10:
     for i in range(nv):
         cod = input('codigo del pais: ')
@@ -11,7 +11,7 @@ if nv < 10:
             cad = cad+cod+num+'|'
         else:
             continue #break
-    cad = cad.replace('+52','')
+    cad = re.sub(RE,'',cad)
     cad = cad.split('|')
     long = len(cad)-1
     for i in range(long+1):
