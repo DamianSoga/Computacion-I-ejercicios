@@ -1,0 +1,4 @@
+y=[(x**x)+(3*x)for x in range(10)]
+print(y)
+z={zip('x',x)for x in range}
+print(z)

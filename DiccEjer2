@@ -1,0 +1,5 @@
+materias=['calculo','algebra','geometria','computo']
+creditos=[5,10,2,7]
+
+val=dict(zip(materias,creditos))
+print(val)
