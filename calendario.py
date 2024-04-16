@@ -1,7 +1,7 @@
 def diaspmes(nombre):
     nombre=nombre.lower()
     print(nombre)
-    meses=['','enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembree','diciembre']
+    meses=['','enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre']
     con31=[1,3,5,7,8,11,12]
     con30=[4,6,10,9]
     con28=[2]
@@ -31,22 +31,16 @@ def diaspmesv(lismeses):
 
 
 
-def mesbo(mes,dias):
-    x=slice(0,7)
-    return " ".join(list(map(str,dias[x])))
+def mesbo(mes):
+    res=[]
+    for i in range(5):
+        x=slice(0,7)
+        d=" ".join(list(map(str,mes[x])))
+        res.append(d)
+        del mes[0:7]
+    return "\n".join(res)
 
 if __name__=='__main__':
-    CAL=diaspmesv('febrero')
-    d28=list(range(1,29))
-    mesbo(CAL,d28)
-    print(mesbo)
-
-
-
-
-q
-    
-
-
-
-
+    CAL=diaspmesv('octubre')
+    cal=mesbo(CAL)
+    print(cal)
