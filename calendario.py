@@ -40,7 +40,19 @@ def mesbo(mes):
         del mes[0:7]
     return "\n".join(res)
 
+def mesbos(lismeses):
+    m=len(lismeses)
+    if len(lismeses)>=2:
+        l=[]
+        for i in lismeses:
+            n=mesbo(i)
+            l.append(n)
+        return l
+    else:
+        return mesbo(lismeses)
+
 if __name__=='__main__':
-    CAL=diaspmesv('octubre')
-    cal=mesbo(CAL)
+    CAL=diaspmesv(['octubre','enero'])
+    print(CAL)
+    cal=mesbos(CAL)
     print(cal)
